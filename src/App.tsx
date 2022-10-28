@@ -2,6 +2,9 @@ import React, { ReactElement } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button } from './Button';
+// import { withButtonComponent } from './HOC/withButtonComponent';
+import CloseButton from './HOC/CloseButton';
+import ClickButton from './HOC/ClickButton';
 
 function App (): ReactElement {
   // const [message, setMessage] = useState('no message');
@@ -32,6 +35,10 @@ function App (): ReactElement {
         </header>
       </div>
       {button}
+      <CloseButton link='sampleLink'/>
+      <ClickButton/>
+      {/* {withButtonComponent(CloseButton)} */}
+      {/* {withButtonComponent(ClickButton)} */}
     </>
   );
 }
